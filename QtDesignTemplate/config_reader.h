@@ -1,7 +1,7 @@
 #ifndef CONFIG_READER_H
 #define CONFIG_READER_H
 
-#define DEBUG_SETTINGS_INFO
+//#define DEBUG_SETTINGS_INFO
 
 #include <QMap>
 #include <QStringList>

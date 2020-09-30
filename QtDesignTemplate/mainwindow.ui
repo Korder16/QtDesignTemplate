@@ -39,91 +39,22 @@
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="0">
-       <widget class="QPushButton" name="pushButton_3">
+      <item row="13" column="0">
+       <widget class="QTimeEdit" name="te">
         <property name="accessibleName">
-         <string>btn</string>
-        </property>
-        <property name="text">
-         <string>Обычная кнопка</string>
+         <string>te</string>
         </property>
        </widget>
       </item>
-      <item row="6" column="0">
-       <widget class="QRadioButton" name="radioButton">
+      <item row="20" column="0">
+       <widget class="QSlider" name="hslider">
         <property name="accessibleName">
-         <string>rb</string>
+         <string>hslider</string>
         </property>
-        <property name="text">
-         <string>RadioButton</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QCheckBox" name="checkBox_2">
-        <property name="accessibleName">
-         <string>cb</string>
-        </property>
-        <property name="text">
-         <string>CheckBox</string>
-        </property>
-        <property name="tristate">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="22" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>0                          52%                   100</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QToolButton" name="toolButton_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Кнопка с меню</string>
-        </property>
-        <property name="popupMode">
-         <enum>QToolButton::MenuButtonPopup</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0">
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="accessibleName">
-         <string>le</string>
-        </property>
-       </widget>
-      </item>
-      <item row="23" column="0">
-       <widget class="QScrollBar" name="horizontalScrollBar">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-      </item>
-      <item row="14" column="0">
-       <widget class="QDateEdit" name="dateEdit"/>
-      </item>
-      <item row="15" column="0">
-       <widget class="QDateTimeEdit" name="dateTimeEdit">
-        <property name="accessibleName">
-         <string>dte</string>
-        </property>
-       </widget>
-      </item>
-      <item row="18" column="0">
-       <widget class="QLCDNumber" name="lcdNumber"/>
-      </item>
-      <item row="13" column="0">
-       <widget class="QTimeEdit" name="timeEdit"/>
       </item>
       <item row="4" column="0">
        <widget class="QPushButton" name="pushButton_7">
@@ -132,6 +63,26 @@
         </property>
         <property name="text">
          <string>Exit</string>
+        </property>
+       </widget>
+      </item>
+      <item row="22" column="0">
+       <widget class="QDial" name="dial"/>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLineEdit" name="le">
+        <property name="accessibleName">
+         <string>le</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="0">
+       <widget class="QLabel" name="label">
+        <property name="accessibleName">
+         <string>label</string>
+        </property>
+        <property name="text">
+         <string>Надпись</string>
         </property>
        </widget>
       </item>
@@ -192,10 +143,42 @@
         </item>
        </widget>
       </item>
-      <item row="19" column="0">
-       <widget class="QLabel" name="label_2">
+      <item row="21" column="0">
+       <widget class="QScrollBar" name="hsbar">
+        <property name="accessibleName">
+         <string>hsbar</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QToolButton" name="toolButton_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string>tool_btn</string>
+        </property>
         <property name="text">
-         <string>Значение</string>
+         <string>Кнопка с меню</string>
+        </property>
+        <property name="popupMode">
+         <enum>QToolButton::MenuButtonPopup</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="accessibleName">
+         <string>btn</string>
+        </property>
+        <property name="text">
+         <string>Обычная кнопка</string>
         </property>
        </widget>
       </item>
@@ -209,52 +192,87 @@
         </property>
        </widget>
       </item>
-      <item row="21" column="0">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="24" column="0">
-       <widget class="QDial" name="dial"/>
-      </item>
       <item row="17" column="0">
-       <widget class="QProgressBar" name="progressBar">
+       <widget class="QProgressBar" name="prog_bar">
         <property name="accessibleName">
-         <string>pb</string>
+         <string>prog_bar</string>
         </property>
         <property name="value">
-         <number>24</number>
+         <number>78</number>
         </property>
        </widget>
       </item>
-      <item row="20" column="0">
-       <widget class="QSlider" name="horizontalSlider">
+      <item row="6" column="0">
+       <widget class="QRadioButton" name="radioButton">
         <property name="accessibleName">
-         <string>hs</string>
+         <string>rb</string>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+        <property name="text">
+         <string>RadioButton</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="0">
+       <widget class="QDateTimeEdit" name="dateTimeEdit">
+        <property name="accessibleName">
+         <string>dte</string>
         </property>
        </widget>
       </item>
       <item row="11" column="0">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+       <widget class="QDoubleSpinBox" name="dsb">
+        <property name="accessibleName">
+         <string>dsb</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QDateEdit" name="de">
+        <property name="accessibleName">
+         <string>de</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QCheckBox" name="checkBox_2">
+        <property name="accessibleName">
+         <string>cb</string>
+        </property>
+        <property name="text">
+         <string>CheckBox</string>
+        </property>
+        <property name="tristate">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="0">
+       <widget class="QLCDNumber" name="lcd">
+        <property name="accessibleName">
+         <string>lcd</string>
+        </property>
+        <property name="segmentStyle">
+         <enum>QLCDNumber::Filled</enum>
+        </property>
+        <property name="intValue" stdset="0">
+         <number>13</number>
+        </property>
+       </widget>
       </item>
       <item row="10" column="0">
-       <widget class="QSpinBox" name="spinBox"/>
+       <widget class="QSpinBox" name="sb">
+        <property name="accessibleName">
+         <string>sb</string>
+        </property>
+       </widget>
       </item>
-      <item row="16" column="0">
-       <widget class="QLabel" name="label">
+      <item row="19" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="accessibleName">
+         <string>label</string>
+        </property>
         <property name="text">
-         <string>Надпись</string>
+         <string>Значение</string>
         </property>
        </widget>
       </item>
@@ -271,7 +289,10 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_5">
       <item>
-       <widget class="QTextEdit" name="textEdit">
+       <widget class="QTextEdit" name="text_ed">
+        <property name="accessibleName">
+         <string>text_ed</string>
+        </property>
         <property name="html">
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -285,6 +306,9 @@ p, li { white-space: pre-wrap; }
       </item>
       <item>
        <widget class="QPlainTextEdit" name="plainTextEdit">
+        <property name="accessibleName">
+         <string>plain_text_ed</string>
+        </property>
         <property name="plainText">
          <string>Plain Text Edit
 </string>
@@ -308,6 +332,12 @@ p, li { white-space: pre-wrap; }
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QToolBox" name="toolBox">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
         <property name="currentIndex">
          <number>0</number>
         </property>
@@ -355,8 +385,8 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>194</width>
+           <height>142</height>
           </rect>
          </property>
          <attribute name="label">
@@ -367,6 +397,9 @@ p, li { white-space: pre-wrap; }
       </item>
       <item>
        <widget class="QTabWidget" name="tabWidget">
+        <property name="accessibleName">
+         <string>tab_w</string>
+        </property>
         <property name="currentIndex">
          <number>0</number>
         </property>
@@ -437,9 +470,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QListWidget" name="lw">
+       <widget class="QListWidget" name="listWidget">
         <property name="accessibleName">
-         <string>lw</string>
+         <string>lv</string>
         </property>
         <item>
          <property name="text">
@@ -470,6 +503,9 @@ p, li { white-space: pre-wrap; }
       </item>
       <item>
        <widget class="QTreeWidget" name="treeWidget">
+        <property name="accessibleName">
+         <string>tree_v</string>
+        </property>
         <column>
          <property name="text">
           <string>Столбец №1</string>
@@ -517,6 +553,9 @@ p, li { white-space: pre-wrap; }
       </item>
       <item>
        <widget class="QTableWidget" name="tableWidget">
+        <property name="accessibleName">
+         <string>table_v</string>
+        </property>
         <row>
          <property name="text">
           <string>Строка №1</string>

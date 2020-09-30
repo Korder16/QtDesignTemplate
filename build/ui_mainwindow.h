@@ -38,7 +38,6 @@
 #include <QtGui/QScrollArea>
 #include <QtGui/QScrollBar>
 #include <QtGui/QSlider>
-#include <QtGui/QSpacerItem>
 #include <QtGui/QSpinBox>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
@@ -60,31 +59,29 @@ public:
     QGroupBox *groupBox;
     QWidget *layoutWidget;
     QGridLayout *gridLayout;
-    QPushButton *pushButton_3;
-    QRadioButton *radioButton;
-    QCheckBox *checkBox_2;
-    QLabel *label_3;
-    QToolButton *toolButton_2;
-    QLineEdit *lineEdit;
-    QScrollBar *horizontalScrollBar;
-    QDateEdit *dateEdit;
-    QDateTimeEdit *dateTimeEdit;
-    QLCDNumber *lcdNumber;
-    QTimeEdit *timeEdit;
+    QTimeEdit *te;
+    QSlider *hslider;
     QPushButton *pushButton_7;
-    QComboBox *cbb;
-    QLabel *label_2;
-    QPushButton *pushButton_2;
-    QSpacerItem *verticalSpacer;
     QDial *dial;
-    QProgressBar *progressBar;
-    QSlider *horizontalSlider;
-    QDoubleSpinBox *doubleSpinBox_2;
-    QSpinBox *spinBox;
+    QLineEdit *le;
     QLabel *label;
+    QComboBox *cbb;
+    QScrollBar *hsbar;
+    QToolButton *toolButton_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_2;
+    QProgressBar *prog_bar;
+    QRadioButton *radioButton;
+    QDateTimeEdit *dateTimeEdit;
+    QDoubleSpinBox *dsb;
+    QDateEdit *de;
+    QCheckBox *checkBox_2;
+    QLCDNumber *lcd;
+    QSpinBox *sb;
+    QLabel *label_2;
     QWidget *layoutWidget_2;
     QVBoxLayout *verticalLayout_5;
-    QTextEdit *textEdit;
+    QTextEdit *text_ed;
     QPlainTextEdit *plainTextEdit;
     QCalendarWidget *calendarWidget_2;
     QWidget *layoutWidget_3;
@@ -106,7 +103,7 @@ public:
     QMdiArea *mdiArea;
     QWidget *layoutWidget_4;
     QVBoxLayout *verticalLayout_2;
-    QListWidget *lw;
+    QListWidget *listWidget;
     QTreeWidget *treeWidget;
     QTableWidget *tableWidget;
     QPushButton *pb_change_theme;
@@ -129,26 +126,47 @@ public:
         gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton_3 = new QPushButton(layoutWidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        te = new QTimeEdit(layoutWidget);
+        te->setObjectName(QString::fromUtf8("te"));
 
-        gridLayout->addWidget(pushButton_3, 1, 0, 1, 1);
+        gridLayout->addWidget(te, 13, 0, 1, 1);
 
-        radioButton = new QRadioButton(layoutWidget);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        hslider = new QSlider(layoutWidget);
+        hslider->setObjectName(QString::fromUtf8("hslider"));
+        hslider->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(radioButton, 6, 0, 1, 1);
+        gridLayout->addWidget(hslider, 20, 0, 1, 1);
 
-        checkBox_2 = new QCheckBox(layoutWidget);
-        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
-        checkBox_2->setTristate(true);
+        pushButton_7 = new QPushButton(layoutWidget);
+        pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
 
-        gridLayout->addWidget(checkBox_2, 7, 0, 1, 1);
+        gridLayout->addWidget(pushButton_7, 4, 0, 1, 1);
 
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        dial = new QDial(layoutWidget);
+        dial->setObjectName(QString::fromUtf8("dial"));
 
-        gridLayout->addWidget(label_3, 22, 0, 1, 1);
+        gridLayout->addWidget(dial, 22, 0, 1, 1);
+
+        le = new QLineEdit(layoutWidget);
+        le->setObjectName(QString::fromUtf8("le"));
+
+        gridLayout->addWidget(le, 9, 0, 1, 1);
+
+        label = new QLabel(layoutWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout->addWidget(label, 16, 0, 1, 1);
+
+        cbb = new QComboBox(layoutWidget);
+        cbb->setObjectName(QString::fromUtf8("cbb"));
+
+        gridLayout->addWidget(cbb, 8, 0, 1, 1);
+
+        hsbar = new QScrollBar(layoutWidget);
+        hsbar->setObjectName(QString::fromUtf8("hsbar"));
+        hsbar->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(hsbar, 21, 0, 1, 1);
 
         toolButton_2 = new QToolButton(layoutWidget);
         toolButton_2->setObjectName(QString::fromUtf8("toolButton_2"));
@@ -161,92 +179,64 @@ public:
 
         gridLayout->addWidget(toolButton_2, 5, 0, 1, 1);
 
-        lineEdit = new QLineEdit(layoutWidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        pushButton_3 = new QPushButton(layoutWidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
 
-        gridLayout->addWidget(lineEdit, 9, 0, 1, 1);
-
-        horizontalScrollBar = new QScrollBar(layoutWidget);
-        horizontalScrollBar->setObjectName(QString::fromUtf8("horizontalScrollBar"));
-        horizontalScrollBar->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(horizontalScrollBar, 23, 0, 1, 1);
-
-        dateEdit = new QDateEdit(layoutWidget);
-        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-
-        gridLayout->addWidget(dateEdit, 14, 0, 1, 1);
-
-        dateTimeEdit = new QDateTimeEdit(layoutWidget);
-        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
-
-        gridLayout->addWidget(dateTimeEdit, 15, 0, 1, 1);
-
-        lcdNumber = new QLCDNumber(layoutWidget);
-        lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
-
-        gridLayout->addWidget(lcdNumber, 18, 0, 1, 1);
-
-        timeEdit = new QTimeEdit(layoutWidget);
-        timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
-
-        gridLayout->addWidget(timeEdit, 13, 0, 1, 1);
-
-        pushButton_7 = new QPushButton(layoutWidget);
-        pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
-
-        gridLayout->addWidget(pushButton_7, 4, 0, 1, 1);
-
-        cbb = new QComboBox(layoutWidget);
-        cbb->setObjectName(QString::fromUtf8("cbb"));
-
-        gridLayout->addWidget(cbb, 8, 0, 1, 1);
-
-        label_2 = new QLabel(layoutWidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        gridLayout->addWidget(label_2, 19, 0, 1, 1);
+        gridLayout->addWidget(pushButton_3, 1, 0, 1, 1);
 
         pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
         gridLayout->addWidget(pushButton_2, 2, 0, 1, 1);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        prog_bar = new QProgressBar(layoutWidget);
+        prog_bar->setObjectName(QString::fromUtf8("prog_bar"));
+        prog_bar->setValue(78);
 
-        gridLayout->addItem(verticalSpacer, 21, 0, 1, 1);
+        gridLayout->addWidget(prog_bar, 17, 0, 1, 1);
 
-        dial = new QDial(layoutWidget);
-        dial->setObjectName(QString::fromUtf8("dial"));
+        radioButton = new QRadioButton(layoutWidget);
+        radioButton->setObjectName(QString::fromUtf8("radioButton"));
 
-        gridLayout->addWidget(dial, 24, 0, 1, 1);
+        gridLayout->addWidget(radioButton, 6, 0, 1, 1);
 
-        progressBar = new QProgressBar(layoutWidget);
-        progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setValue(24);
+        dateTimeEdit = new QDateTimeEdit(layoutWidget);
+        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
 
-        gridLayout->addWidget(progressBar, 17, 0, 1, 1);
+        gridLayout->addWidget(dateTimeEdit, 15, 0, 1, 1);
 
-        horizontalSlider = new QSlider(layoutWidget);
-        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
-        horizontalSlider->setOrientation(Qt::Horizontal);
+        dsb = new QDoubleSpinBox(layoutWidget);
+        dsb->setObjectName(QString::fromUtf8("dsb"));
 
-        gridLayout->addWidget(horizontalSlider, 20, 0, 1, 1);
+        gridLayout->addWidget(dsb, 11, 0, 1, 1);
 
-        doubleSpinBox_2 = new QDoubleSpinBox(layoutWidget);
-        doubleSpinBox_2->setObjectName(QString::fromUtf8("doubleSpinBox_2"));
+        de = new QDateEdit(layoutWidget);
+        de->setObjectName(QString::fromUtf8("de"));
 
-        gridLayout->addWidget(doubleSpinBox_2, 11, 0, 1, 1);
+        gridLayout->addWidget(de, 14, 0, 1, 1);
 
-        spinBox = new QSpinBox(layoutWidget);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
+        checkBox_2 = new QCheckBox(layoutWidget);
+        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
+        checkBox_2->setTristate(true);
 
-        gridLayout->addWidget(spinBox, 10, 0, 1, 1);
+        gridLayout->addWidget(checkBox_2, 7, 0, 1, 1);
 
-        label = new QLabel(layoutWidget);
-        label->setObjectName(QString::fromUtf8("label"));
+        lcd = new QLCDNumber(layoutWidget);
+        lcd->setObjectName(QString::fromUtf8("lcd"));
+        lcd->setSegmentStyle(QLCDNumber::Filled);
+        lcd->setProperty("intValue", QVariant(13));
 
-        gridLayout->addWidget(label, 16, 0, 1, 1);
+        gridLayout->addWidget(lcd, 18, 0, 1, 1);
+
+        sb = new QSpinBox(layoutWidget);
+        sb->setObjectName(QString::fromUtf8("sb"));
+
+        gridLayout->addWidget(sb, 10, 0, 1, 1);
+
+        label_2 = new QLabel(layoutWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        gridLayout->addWidget(label_2, 19, 0, 1, 1);
 
         layoutWidget_2 = new QWidget(groupBox);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
@@ -254,10 +244,10 @@ public:
         verticalLayout_5 = new QVBoxLayout(layoutWidget_2);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        textEdit = new QTextEdit(layoutWidget_2);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        text_ed = new QTextEdit(layoutWidget_2);
+        text_ed->setObjectName(QString::fromUtf8("text_ed"));
 
-        verticalLayout_5->addWidget(textEdit);
+        verticalLayout_5->addWidget(text_ed);
 
         plainTextEdit = new QPlainTextEdit(layoutWidget_2);
         plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
@@ -277,6 +267,8 @@ public:
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         toolBox = new QToolBox(layoutWidget_3);
         toolBox->setObjectName(QString::fromUtf8("toolBox"));
+        toolBox->setFrameShape(QFrame::NoFrame);
+        toolBox->setFrameShadow(QFrame::Plain);
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
         page->setGeometry(QRect(0, 0, 194, 142));
@@ -301,7 +293,7 @@ public:
         toolBox->addItem(page, QString::fromUtf8("\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2261"));
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
-        page_2->setGeometry(QRect(0, 0, 100, 30));
+        page_2->setGeometry(QRect(0, 0, 194, 142));
         toolBox->addItem(page_2, QString::fromUtf8("\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2262"));
 
         verticalLayout_3->addWidget(toolBox);
@@ -352,15 +344,15 @@ public:
         verticalLayout_2 = new QVBoxLayout(layoutWidget_4);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        lw = new QListWidget(layoutWidget_4);
-        new QListWidgetItem(lw);
-        new QListWidgetItem(lw);
-        new QListWidgetItem(lw);
-        new QListWidgetItem(lw);
-        new QListWidgetItem(lw);
-        lw->setObjectName(QString::fromUtf8("lw"));
+        listWidget = new QListWidget(layoutWidget_4);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
 
-        verticalLayout_2->addWidget(lw);
+        verticalLayout_2->addWidget(listWidget);
 
         treeWidget = new QTreeWidget(layoutWidget_4);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem(treeWidget);
@@ -457,29 +449,22 @@ public:
 #endif // QT_NO_ACCESSIBILITY
         groupBox->setTitle(QApplication::translate("MainWindow", "GroupBox text", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_ACCESSIBILITY
-        pushButton_3->setAccessibleName(QApplication::translate("MainWindow", "btn", 0, QApplication::UnicodeUTF8));
-#endif // QT_NO_ACCESSIBILITY
-        pushButton_3->setText(QApplication::translate("MainWindow", "\320\236\320\261\321\213\321\207\320\275\320\260\321\217 \320\272\320\275\320\276\320\277\320\272\320\260", 0, QApplication::UnicodeUTF8));
-#ifndef QT_NO_ACCESSIBILITY
-        radioButton->setAccessibleName(QApplication::translate("MainWindow", "rb", 0, QApplication::UnicodeUTF8));
-#endif // QT_NO_ACCESSIBILITY
-        radioButton->setText(QApplication::translate("MainWindow", "RadioButton", 0, QApplication::UnicodeUTF8));
-#ifndef QT_NO_ACCESSIBILITY
-        checkBox_2->setAccessibleName(QApplication::translate("MainWindow", "cb", 0, QApplication::UnicodeUTF8));
-#endif // QT_NO_ACCESSIBILITY
-        checkBox_2->setText(QApplication::translate("MainWindow", "CheckBox", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("MainWindow", "0                          52%                   100", 0, QApplication::UnicodeUTF8));
-        toolButton_2->setText(QApplication::translate("MainWindow", "\320\232\320\275\320\276\320\277\320\272\320\260 \321\201 \320\274\320\265\320\275\321\216", 0, QApplication::UnicodeUTF8));
-#ifndef QT_NO_ACCESSIBILITY
-        lineEdit->setAccessibleName(QApplication::translate("MainWindow", "le", 0, QApplication::UnicodeUTF8));
+        te->setAccessibleName(QApplication::translate("MainWindow", "te", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
 #ifndef QT_NO_ACCESSIBILITY
-        dateTimeEdit->setAccessibleName(QApplication::translate("MainWindow", "dte", 0, QApplication::UnicodeUTF8));
+        hslider->setAccessibleName(QApplication::translate("MainWindow", "hslider", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
 #ifndef QT_NO_ACCESSIBILITY
         pushButton_7->setAccessibleName(QApplication::translate("MainWindow", "close_btn", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
         pushButton_7->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        le->setAccessibleName(QApplication::translate("MainWindow", "le", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        label->setAccessibleName(QApplication::translate("MainWindow", "label", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+        label->setText(QApplication::translate("MainWindow", "\320\235\320\260\320\264\320\277\320\270\321\201\321\214", 0, QApplication::UnicodeUTF8));
         cbb->clear();
         cbb->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "1", 0, QApplication::UnicodeUTF8)
@@ -496,19 +481,55 @@ public:
 #ifndef QT_NO_ACCESSIBILITY
         cbb->setAccessibleName(QApplication::translate("MainWindow", "cbb", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
-        label_2->setText(QApplication::translate("MainWindow", "\320\227\320\275\320\260\321\207\320\265\320\275\320\270\320\265", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        hsbar->setAccessibleName(QApplication::translate("MainWindow", "hsbar", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        toolButton_2->setAccessibleName(QApplication::translate("MainWindow", "tool_btn", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+        toolButton_2->setText(QApplication::translate("MainWindow", "\320\232\320\275\320\276\320\277\320\272\320\260 \321\201 \320\274\320\265\320\275\321\216", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        pushButton_3->setAccessibleName(QApplication::translate("MainWindow", "btn", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+        pushButton_3->setText(QApplication::translate("MainWindow", "\320\236\320\261\321\213\321\207\320\275\320\260\321\217 \320\272\320\275\320\276\320\277\320\272\320\260", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_ACCESSIBILITY
         pushButton_2->setAccessibleName(QApplication::translate("MainWindow", "save_btn", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
         pushButton_2->setText(QApplication::translate("MainWindow", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_ACCESSIBILITY
-        progressBar->setAccessibleName(QApplication::translate("MainWindow", "pb", 0, QApplication::UnicodeUTF8));
+        prog_bar->setAccessibleName(QApplication::translate("MainWindow", "prog_bar", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
 #ifndef QT_NO_ACCESSIBILITY
-        horizontalSlider->setAccessibleName(QApplication::translate("MainWindow", "hs", 0, QApplication::UnicodeUTF8));
+        radioButton->setAccessibleName(QApplication::translate("MainWindow", "rb", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
-        label->setText(QApplication::translate("MainWindow", "\320\235\320\260\320\264\320\277\320\270\321\201\321\214", 0, QApplication::UnicodeUTF8));
-        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        radioButton->setText(QApplication::translate("MainWindow", "RadioButton", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        dateTimeEdit->setAccessibleName(QApplication::translate("MainWindow", "dte", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        dsb->setAccessibleName(QApplication::translate("MainWindow", "dsb", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        de->setAccessibleName(QApplication::translate("MainWindow", "de", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        checkBox_2->setAccessibleName(QApplication::translate("MainWindow", "cb", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+        checkBox_2->setText(QApplication::translate("MainWindow", "CheckBox", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        lcd->setAccessibleName(QApplication::translate("MainWindow", "lcd", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        sb->setAccessibleName(QApplication::translate("MainWindow", "sb", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        label_2->setAccessibleName(QApplication::translate("MainWindow", "label", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+        label_2->setText(QApplication::translate("MainWindow", "\320\227\320\275\320\260\321\207\320\265\320\275\320\270\320\265", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        text_ed->setAccessibleName(QApplication::translate("MainWindow", "text_ed", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+        text_ed->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
@@ -516,29 +537,35 @@ public:
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-style:italic; text-decoration: underline;\"><br /></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\""
                         " font-family:'Sans Serif'; font-style:italic; text-decoration: underline; color:#006330;\">HTML DOC</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        plainTextEdit->setAccessibleName(QApplication::translate("MainWindow", "plain_text_ed", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
         plainTextEdit->setPlainText(QApplication::translate("MainWindow", "Plain Text Edit\n"
 "", 0, QApplication::UnicodeUTF8));
         toolBox->setItemText(toolBox->indexOf(page), QApplication::translate("MainWindow", "\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2261", 0, QApplication::UnicodeUTF8));
         toolBox->setItemText(toolBox->indexOf(page_2), QApplication::translate("MainWindow", "\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2262", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        tabWidget->setAccessibleName(QApplication::translate("MainWindow", "tab_w", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "\320\222\320\272\320\273\320\260\320\264\320\272\320\260 \342\204\2261", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "\320\222\320\272\320\273\320\260\320\264\320\272\320\260 \342\204\2262", 0, QApplication::UnicodeUTF8));
 
-        const bool __sortingEnabled = lw->isSortingEnabled();
-        lw->setSortingEnabled(false);
-        QListWidgetItem *___qlistwidgetitem = lw->item(0);
+        const bool __sortingEnabled = listWidget->isSortingEnabled();
+        listWidget->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
         ___qlistwidgetitem->setText(QApplication::translate("MainWindow", "\320\255\320\273\320\265\320\274\320\265\320\275\321\202 \321\201\320\277\320\270\321\201\320\272\320\260 \342\204\226 1", 0, QApplication::UnicodeUTF8));
-        QListWidgetItem *___qlistwidgetitem1 = lw->item(1);
+        QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
         ___qlistwidgetitem1->setText(QApplication::translate("MainWindow", "\320\255\320\273\320\265\320\274\320\265\320\275\321\202 \321\201\320\277\320\270\321\201\320\272\320\260 \342\204\226 2", 0, QApplication::UnicodeUTF8));
-        QListWidgetItem *___qlistwidgetitem2 = lw->item(2);
+        QListWidgetItem *___qlistwidgetitem2 = listWidget->item(2);
         ___qlistwidgetitem2->setText(QApplication::translate("MainWindow", "\320\255\320\273\320\265\320\274\320\265\320\275\321\202 \321\201\320\277\320\270\321\201\320\272\320\260 \342\204\226 3", 0, QApplication::UnicodeUTF8));
-        QListWidgetItem *___qlistwidgetitem3 = lw->item(3);
+        QListWidgetItem *___qlistwidgetitem3 = listWidget->item(3);
         ___qlistwidgetitem3->setText(QApplication::translate("MainWindow", "\320\255\320\273\320\265\320\274\320\265\320\275\321\202 \321\201\320\277\320\270\321\201\320\272\320\260 \342\204\226 4", 0, QApplication::UnicodeUTF8));
-        QListWidgetItem *___qlistwidgetitem4 = lw->item(4);
+        QListWidgetItem *___qlistwidgetitem4 = listWidget->item(4);
         ___qlistwidgetitem4->setText(QApplication::translate("MainWindow", "\320\255\320\273\320\265\320\274\320\265\320\275\321\202 \321\201\320\277\320\270\321\201\320\272\320\260 \342\204\226 5", 0, QApplication::UnicodeUTF8));
-        lw->setSortingEnabled(__sortingEnabled);
+        listWidget->setSortingEnabled(__sortingEnabled);
 
 #ifndef QT_NO_ACCESSIBILITY
-        lw->setAccessibleName(QApplication::translate("MainWindow", "lw", 0, QApplication::UnicodeUTF8));
+        listWidget->setAccessibleName(QApplication::translate("MainWindow", "lv", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
         QTreeWidgetItem *___qtreewidgetitem = treeWidget->headerItem();
         ___qtreewidgetitem->setText(1, QApplication::translate("MainWindow", "\320\241\321\202\320\276\320\273\320\261\320\265\321\206 \342\204\2262", 0, QApplication::UnicodeUTF8));
@@ -561,6 +588,9 @@ public:
         ___qtreewidgetitem6->setText(0, QApplication::translate("MainWindow", "\320\224\320\276\321\207\320\265\321\200\320\275\320\270\320\271 \321\215\320\273\320\265\320\274\320\265\320\275\321\202 \342\204\2261", 0, QApplication::UnicodeUTF8));
         treeWidget->setSortingEnabled(__sortingEnabled1);
 
+#ifndef QT_NO_ACCESSIBILITY
+        treeWidget->setAccessibleName(QApplication::translate("MainWindow", "tree_v", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "\320\241\321\202\320\276\320\273\320\261\320\265\321\206 \342\204\2261", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
@@ -612,6 +642,9 @@ public:
         ___qtablewidgetitem22->setText(QApplication::translate("MainWindow", "\320\255\320\273. \342\204\22615", 0, QApplication::UnicodeUTF8));
         tableWidget->setSortingEnabled(__sortingEnabled2);
 
+#ifndef QT_NO_ACCESSIBILITY
+        tableWidget->setAccessibleName(QApplication::translate("MainWindow", "table_v", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
 #ifndef QT_NO_ACCESSIBILITY
         pb_change_theme->setAccessibleName(QApplication::translate("MainWindow", "ct_btn", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
