@@ -637,7 +637,9 @@ QCalendarWidget QMenu::item
 
 QCalendarWidget QMenu::item:selected
 {
-    background: #00B4D8;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #667db6, stop: 0.5 #0082c8,
+                stop: 0.6 #0082c8, stop:1 #667db6);
     color: white;
 }
 
@@ -645,7 +647,9 @@ QCalendarWidget QMenu::item:selected
 /* Spin Box */
 QCalendarWidget QSpinBox
 {
-    background: #00B4D8;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #667db6, stop: 0.5 #0082c8,
+                stop: 0.6 #0082c8, stop:1 #667db6);
 }
 
 QCalendarWidget QSpinBox::up-button
