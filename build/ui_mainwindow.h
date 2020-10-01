@@ -84,8 +84,14 @@ public:
     QTextEdit *text_ed;
     QPlainTextEdit *plainTextEdit;
     QCalendarWidget *calendarWidget_2;
-    QWidget *layoutWidget_3;
-    QVBoxLayout *verticalLayout_3;
+    QWidget *layoutWidget_4;
+    QVBoxLayout *verticalLayout_2;
+    QListWidget *listWidget;
+    QTreeWidget *treeWidget;
+    QTableWidget *tableWidget;
+    QPushButton *pb_change_theme;
+    QWidget *layoutWidget1;
+    QVBoxLayout *verticalLayout;
     QToolBox *toolBox;
     QWidget *page;
     QVBoxLayout *verticalLayout_7;
@@ -101,12 +107,6 @@ public:
     QDialogButtonBox *buttonBox;
     QWidget *tab_2;
     QMdiArea *mdiArea;
-    QWidget *layoutWidget_4;
-    QVBoxLayout *verticalLayout_2;
-    QListWidget *listWidget;
-    QTreeWidget *treeWidget;
-    QTableWidget *tableWidget;
-    QPushButton *pb_change_theme;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -256,87 +256,10 @@ public:
 
         calendarWidget_2 = new QCalendarWidget(layoutWidget_2);
         calendarWidget_2->setObjectName(QString::fromUtf8("calendarWidget_2"));
+        calendarWidget_2->setGridVisible(true);
+        calendarWidget_2->setNavigationBarVisible(true);
 
         verticalLayout_5->addWidget(calendarWidget_2);
-
-        layoutWidget_3 = new QWidget(groupBox);
-        layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
-        layoutWidget_3->setGeometry(QRect(550, 40, 196, 621));
-        verticalLayout_3 = new QVBoxLayout(layoutWidget_3);
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        toolBox = new QToolBox(layoutWidget_3);
-        toolBox->setObjectName(QString::fromUtf8("toolBox"));
-        toolBox->setFrameShape(QFrame::NoFrame);
-        toolBox->setFrameShadow(QFrame::Plain);
-        page = new QWidget();
-        page->setObjectName(QString::fromUtf8("page"));
-        page->setGeometry(QRect(0, 0, 194, 142));
-        verticalLayout_7 = new QVBoxLayout(page);
-        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
-        scrollArea_2 = new QScrollArea(page);
-        scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
-        scrollArea_2->setWidgetResizable(true);
-        scrollAreaWidgetContents_2 = new QWidget();
-        scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 174, 91));
-        scrollArea_2->setWidget(scrollAreaWidgetContents_2);
-
-        verticalLayout_7->addWidget(scrollArea_2);
-
-        buttonBox_2 = new QDialogButtonBox(page);
-        buttonBox_2->setObjectName(QString::fromUtf8("buttonBox_2"));
-        buttonBox_2->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-
-        verticalLayout_7->addWidget(buttonBox_2);
-
-        toolBox->addItem(page, QString::fromUtf8("\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2261"));
-        page_2 = new QWidget();
-        page_2->setObjectName(QString::fromUtf8("page_2"));
-        page_2->setGeometry(QRect(0, 0, 194, 142));
-        toolBox->addItem(page_2, QString::fromUtf8("\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2262"));
-
-        verticalLayout_3->addWidget(toolBox);
-
-        tabWidget = new QTabWidget(layoutWidget_3);
-        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tab = new QWidget();
-        tab->setObjectName(QString::fromUtf8("tab"));
-        verticalLayout_6 = new QVBoxLayout(tab);
-        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
-        scrollArea = new QScrollArea(tab);
-        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
-        scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 170, 121));
-        scrollArea->setWidget(scrollAreaWidgetContents);
-
-        verticalLayout_6->addWidget(scrollArea);
-
-        buttonBox = new QDialogButtonBox(tab);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-
-        verticalLayout_6->addWidget(buttonBox);
-
-        tabWidget->addTab(tab, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        tabWidget->addTab(tab_2, QString());
-
-        verticalLayout_3->addWidget(tabWidget);
-
-        mdiArea = new QMdiArea(layoutWidget_3);
-        mdiArea->setObjectName(QString::fromUtf8("mdiArea"));
-        QSizePolicy sizePolicy1(QSizePolicy::Ignored, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(mdiArea->sizePolicy().hasHeightForWidth());
-        mdiArea->setSizePolicy(sizePolicy1);
-        mdiArea->setMaximumSize(QSize(16777215, 200));
-
-        verticalLayout_3->addWidget(mdiArea);
 
         layoutWidget_4 = new QWidget(groupBox);
         layoutWidget_4->setObjectName(QString::fromUtf8("layoutWidget_4"));
@@ -423,6 +346,86 @@ public:
         pb_change_theme = new QPushButton(groupBox);
         pb_change_theme->setObjectName(QString::fromUtf8("pb_change_theme"));
         pb_change_theme->setGeometry(QRect(990, 0, 80, 25));
+        layoutWidget1 = new QWidget(groupBox);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(539, 40, 201, 621));
+        verticalLayout = new QVBoxLayout(layoutWidget1);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        toolBox = new QToolBox(layoutWidget1);
+        toolBox->setObjectName(QString::fromUtf8("toolBox"));
+        toolBox->setMinimumSize(QSize(0, 50));
+        toolBox->setFrameShape(QFrame::NoFrame);
+        toolBox->setFrameShadow(QFrame::Plain);
+        page = new QWidget();
+        page->setObjectName(QString::fromUtf8("page"));
+        page->setGeometry(QRect(0, 0, 199, 142));
+        verticalLayout_7 = new QVBoxLayout(page);
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
+        scrollArea_2 = new QScrollArea(page);
+        scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
+        scrollArea_2->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 179, 91));
+        scrollArea_2->setWidget(scrollAreaWidgetContents_2);
+
+        verticalLayout_7->addWidget(scrollArea_2);
+
+        buttonBox_2 = new QDialogButtonBox(page);
+        buttonBox_2->setObjectName(QString::fromUtf8("buttonBox_2"));
+        buttonBox_2->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+
+        verticalLayout_7->addWidget(buttonBox_2);
+
+        toolBox->addItem(page, QString::fromUtf8("\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2261"));
+        page_2 = new QWidget();
+        page_2->setObjectName(QString::fromUtf8("page_2"));
+        page_2->setGeometry(QRect(0, 0, 199, 142));
+        toolBox->addItem(page_2, QString::fromUtf8("\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2262"));
+
+        verticalLayout->addWidget(toolBox);
+
+        tabWidget = new QTabWidget(layoutWidget1);
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
+        tab = new QWidget();
+        tab->setObjectName(QString::fromUtf8("tab"));
+        verticalLayout_6 = new QVBoxLayout(tab);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        scrollArea = new QScrollArea(tab);
+        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 175, 121));
+        scrollArea->setWidget(scrollAreaWidgetContents);
+
+        verticalLayout_6->addWidget(scrollArea);
+
+        buttonBox = new QDialogButtonBox(tab);
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+
+        verticalLayout_6->addWidget(buttonBox);
+
+        tabWidget->addTab(tab, QString());
+        tab_2 = new QWidget();
+        tab_2->setObjectName(QString::fromUtf8("tab_2"));
+        tabWidget->addTab(tab_2, QString());
+
+        verticalLayout->addWidget(tabWidget);
+
+        mdiArea = new QMdiArea(layoutWidget1);
+        mdiArea->setObjectName(QString::fromUtf8("mdiArea"));
+        QSizePolicy sizePolicy1(QSizePolicy::Ignored, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(mdiArea->sizePolicy().hasHeightForWidth());
+        mdiArea->setSizePolicy(sizePolicy1);
+        mdiArea->setMaximumSize(QSize(16777215, 200));
+
+        verticalLayout->addWidget(mdiArea);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -542,13 +545,6 @@ public:
 #endif // QT_NO_ACCESSIBILITY
         plainTextEdit->setPlainText(QApplication::translate("MainWindow", "Plain Text Edit\n"
 "", 0, QApplication::UnicodeUTF8));
-        toolBox->setItemText(toolBox->indexOf(page), QApplication::translate("MainWindow", "\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2261", 0, QApplication::UnicodeUTF8));
-        toolBox->setItemText(toolBox->indexOf(page_2), QApplication::translate("MainWindow", "\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2262", 0, QApplication::UnicodeUTF8));
-#ifndef QT_NO_ACCESSIBILITY
-        tabWidget->setAccessibleName(QApplication::translate("MainWindow", "tab_w", 0, QApplication::UnicodeUTF8));
-#endif // QT_NO_ACCESSIBILITY
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "\320\222\320\272\320\273\320\260\320\264\320\272\320\260 \342\204\2261", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "\320\222\320\272\320\273\320\260\320\264\320\272\320\260 \342\204\2262", 0, QApplication::UnicodeUTF8));
 
         const bool __sortingEnabled = listWidget->isSortingEnabled();
         listWidget->setSortingEnabled(false);
@@ -649,6 +645,16 @@ public:
         pb_change_theme->setAccessibleName(QApplication::translate("MainWindow", "ct_btn", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_ACCESSIBILITY
         pb_change_theme->setText(QString());
+#ifndef QT_NO_ACCESSIBILITY
+        toolBox->setAccessibleName(QApplication::translate("MainWindow", "tool_box", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+        toolBox->setItemText(toolBox->indexOf(page), QApplication::translate("MainWindow", "\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2261", 0, QApplication::UnicodeUTF8));
+        toolBox->setItemText(toolBox->indexOf(page_2), QApplication::translate("MainWindow", "\320\241\320\265\320\272\321\206\320\270\321\217 \342\204\2262", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_ACCESSIBILITY
+        tabWidget->setAccessibleName(QApplication::translate("MainWindow", "tab_w", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_ACCESSIBILITY
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "\320\222\320\272\320\273\320\260\320\264\320\272\320\260 \342\204\2261", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "\320\222\320\272\320\273\320\260\320\264\320\272\320\260 \342\204\2262", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
