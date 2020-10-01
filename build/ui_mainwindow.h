@@ -191,7 +191,7 @@ public:
 
         prog_bar = new QProgressBar(layoutWidget);
         prog_bar->setObjectName(QString::fromUtf8("prog_bar"));
-        prog_bar->setValue(78);
+        prog_bar->setValue(29);
 
         gridLayout->addWidget(prog_bar, 17, 0, 1, 1);
 
@@ -345,7 +345,7 @@ public:
 
         pb_change_theme = new QPushButton(groupBox);
         pb_change_theme->setObjectName(QString::fromUtf8("pb_change_theme"));
-        pb_change_theme->setGeometry(QRect(990, 0, 80, 25));
+        pb_change_theme->setGeometry(QRect(980, 0, 80, 25));
         layoutWidget1 = new QWidget(groupBox);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         layoutWidget1->setGeometry(QRect(539, 40, 201, 621));

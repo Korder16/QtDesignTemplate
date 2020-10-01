@@ -4,7 +4,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::MainWindow),
-      m_dark_theme(true)
+      m_dark_theme(false)
 {
     ui->setupUi(this);
     connect(ui->pb_change_theme, SIGNAL(clicked(bool)),
