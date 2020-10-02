@@ -11,7 +11,6 @@ QMainWindow
 QRadioButton[accessibleName="rb"],
 QCheckBox[accessibleName="cb"],
 QGroupBox[accessibleName="gb"],
-QPushButton[accessibleName="btn"],
 QPushButton[accessibleName="close_btn"],
 QPushButton[accessibleName="save_btn"],
 QPushButton[accessibleName="ct_btn"],
@@ -21,7 +20,7 @@ QLineEdit[accessibleName="le"],
 QListView[accessibleName="lv"],
 QTreeView[accessibleName="tree_v"],
 QTableView[accessibleName="table_v"],
-QHeaderView,
+
 
 QComboBox[accessibleName="cbb"],
 QSpinBox[accessibleName="sb"],
@@ -29,18 +28,27 @@ QDoubleSpinBox[accessibleName="dsb"],
 QTimeEdit[accessibleName="te"],
 QDateEdit[accessibleName="de"],
 QLabel[accessibleName="label"],
-QProgressBar[accessibleName="prog_bar"],
+
 
 QTextEdit[accessibleName="text_ed"],
 QAbstractScrollArea[accessibleName="text_ed"],
 QAbstractScrollArea[accessibleName="plain_text_ed"],
 
-QToolButton[accessibleName="tool_btn"],
-QTabBar::tab,
-QToolBox::tab,
-QMenu
+QMenu,
+QToolBar QToolButton
 {
     color: black;
+    font: 16pt "DejaVu LGC Sans Mono";
+}
+
+QPushButton[accessibleName="btn"],
+QHeaderView,
+QToolButton[accessibleName="tool_btn"],
+QTabBar::tab,
+QProgressBar[accessibleName="prog_bar"],
+QToolBox::tab
+{
+    color: white;
     font: 16pt "DejaVu LGC Sans Mono";
 }
 
@@ -183,7 +191,6 @@ QPushButton:pressed[accessibleName="save_btn"]
     /*background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                       stop: 0 #67B26F, stop: 1 #4ca2cd);*/
     border: 1px solid black;
-    color: white;
 }
 
 
@@ -233,7 +240,6 @@ QPushButton[accessibleName="btn"]
     border: 1px solid qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                       stop: 0 #3a7bd5, stop: 1 #3a6073);
     border-radius: 4px;
-    color: white;
 }
 
 
@@ -244,7 +250,6 @@ QPushButton:hover[accessibleName="btn"]
 
     border: 1px solid qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                       stop: 0 #3a7bd5, stop: 1 #3a6073);
-    color: white;
 }
 
 
@@ -254,7 +259,6 @@ QPushButton:pressed[accessibleName="btn"]
                       stop: 0 #3a7bd5, stop: 1 #3a6073);
 
     border: 1px solid black;
-    color: white;
 }
 
 
@@ -304,7 +308,7 @@ QListView::item:selected[accessibleName="lv"]
 {
     background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                 stop:0 #667db6, stop: 0.5 #0082c8,
-                stop: 0.6 #0082c8, stop:1 #667db6);;
+                stop: 0.6 #0082c8, stop:1 #667db6);
 }
 
 QListView::item:selected:hover[accessibleName="lv"]
@@ -327,7 +331,7 @@ QComboBox:item:selected[accessibleName="cbb"]
 {
     background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                 stop:0 #667db6, stop: 0.5 #0082c8,
-                stop: 0.6 #0082c8, stop:1 #667db6);;
+                stop: 0.6 #0082c8, stop:1 #667db6);
     color: white;
 }
 
@@ -376,6 +380,7 @@ QProgressBar[accessibleName="prog_bar"]
     border: 2px solid black;
     border-radius: 5px;
     text-align: center;
+    background: darkgrey;
 }
 
 QProgressBar::chunk
@@ -392,7 +397,7 @@ QSlider::groove:horizontal[accessibleName="hslider"]
 {
     border: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,
                       stop:0 #667db6, stop: 0.5 #0082c8,
-                      stop: 0.6 #0082c8, stop:1 #667db6);;
+                      stop: 0.6 #0082c8, stop:1 #667db6);
     border-radius: 7px;
     height: 16px;
     background: transparent;
@@ -459,10 +464,7 @@ QTableWidget QTableCornerButton::section
 /* HORIZONTAL SCROLL BAR */
 QScrollBar
 {
-    border: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                      stop:0 #667db6, stop: 0.5 #0082c8,
-                      stop: 0.6 #0082c8, stop:1 #667db6);;
-    background: transparent;
+    background: #00B4D8;
 }
 
 /* Horizontal */
@@ -474,7 +476,7 @@ QScrollBar:horizontal
 
 QScrollBar::handle:horizontal
 {
-    border: 2px solid black;
+    border: 1px solid #0096C7;
     min-width: 20px;
 }
 
@@ -505,7 +507,7 @@ QScrollBar:vertical
 
 QScrollBar::handle:vertical
 {
-    border: 2px solid black;
+    border: 1px solid #0096C7;
     min-height: 20px;
 }
 
@@ -558,12 +560,11 @@ QTabBar::tab:hover
 {
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                 stop: 0 #00c6ff, stop: 1 #0072ff);
-
 }
 
 QTabBar::tab:!selected
 {
-    margin-top: 4px; /* make non-selected tabs look smaller */
+    margin-top: 4px;
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                 stop: 0 #3a7bd5, stop: 1 #3a6073);
 }
@@ -636,7 +637,7 @@ QToolButton::menu-button[accessibleName="tool_btn"]
 
 QToolButton::menu-arrow[accessibleName="tool_btn"]
 {
-    border-image: url(../images/down_arrow.png);
+    border-image: url(../images/down_arrow_white.png);
 }
 
 
@@ -742,7 +743,7 @@ QCalendarWidget QSpinBox::up-button
     subcontrol-origin: border;
     subcontrol-position: top right;
     width: 40px;
-    image: url(../images/up_arrow.png);
+    image: url(../images/up_arrow_white.png);
 }
 
 QCalendarWidget QSpinBox::down-button
@@ -750,7 +751,7 @@ QCalendarWidget QSpinBox::down-button
     subcontrol-origin: border;
     subcontrol-position: bottom right;
     width: 40px;
-    image: url(../images/down_arrow.png);
+    image: url(../images/down_arrow_white.png);
 }
 
 /* Month buttons */
@@ -778,4 +779,31 @@ QCalendarWidget QTableView
     selection-background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                 stop:0 #667db6, stop: 0.5 #0082c8,
                                 stop: 0.6 #0082c8, stop:1 #667db6);
+}
+
+
+/* TOOL BAR */
+QToolBar[accessibleName="tool_bar"],
+QStatusBar
+{
+    background: #FFF1E6;
+    border: 2px solid #DDBEA9;
+}
+
+QToolBar QToolButton
+{
+    background: transparent;
+    border: none;
+}
+
+QToolBar QToolButton:hover
+{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                      stop:0 #667db6, stop: 0.5 #0082c8,
+                      stop: 0.6 #0082c8, stop:1 #667db6);
+
+    border: 1px solid qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                      stop: 0 #3a7bd5, stop: 1 #3a6073);
+    border-radius: 4px;
+    color: white;
 }
