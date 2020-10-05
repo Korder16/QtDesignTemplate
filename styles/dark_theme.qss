@@ -161,9 +161,8 @@ QGroupBox:title[accessibleName="gb"]
 QPushButton[accessibleName="save_btn"]
 {
     /* Cyan color */
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                      stop: 0 #06beb6, stop: 1 #48b1bf);
-
+    background-color: #47C992;
+    color: black;
     border: 1px solid #0B9991;
     border-radius: 4px;
 }
@@ -193,8 +192,8 @@ QPushButton:pressed[accessibleName="save_btn"]
 QPushButton[accessibleName="close_btn"]
 {
     /* Red color */
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                      stop: 0 #CB356B, stop: 1 #BD3F32);
+    background-color: #E07348;
+    color: black;
     border: 1px solid #D00000;
     border-radius: 4px;
 }

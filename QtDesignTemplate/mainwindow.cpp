@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pb_change_theme, SIGNAL(clicked(bool)),
             this, SLOT(change_theme()));
     change_theme();
+    ui->pushButton->setDisabled(true);
 }
 
 
