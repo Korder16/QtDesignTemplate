@@ -36,7 +36,28 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    ../images/checkbox_checked.png \
+    ../images/checkbox_checked_all.png \
+    ../images/checkbox_checked_all_white.png \
+    ../images/checkbox_checked_white.png \
+    ../images/checkbox_unchecked.png \
+    ../images/checkbox_unchecked_white.png \
+    ../images/dark_theme_btn.png \
+    ../images/down_arrow.png \
+    ../images/down_arrow_white.png \
+    ../images/left_arrow.png \
+    ../images/left_arrow_white.png \
+    ../images/light_theme_btn.png \
+    ../images/radio_checked.png \
+    ../images/radio_checked_white.png \
+    ../images/radio_unchecked.png \
+    ../images/radio_unchecked_white.png \
+    ../images/right_arrow.png \
+    ../images/right_arrow_white.png \
+    ../images/up_arrow.png \
+    ../images/up_arrow_white.png \
     ../style_config.conf \
-    ../styles/dark_theme.qss \
-    ../styles/light_theme.qss
+    ../styles/dark_theme_settings.txt \
+    ../styles/light_theme_settings.txt \
+    ../styles/style_theme.qss
 

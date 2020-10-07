@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "config_reader.h"
-#include <QLine>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -20,8 +20,16 @@ private slots:
     int change_theme();
 
 private:
+    // Methods
+    int read_style_settings(const QString& settings_file);
+
+    int fill_settings_map(QStringList& style_settings);
+
+    int use_style_settigs(QString& style);
+
     Ui::MainWindow *ui;
 
     bool m_dark_theme;
+    QMap<QString, QString> m_style_settings_map;
 };
 #endif // MAINWINDOW_H

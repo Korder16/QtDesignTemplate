@@ -1,0 +1,52 @@
+// Fonts
+@font = 24px "DejaVu LGC Sans Mono"
+@small_font = 16px bold "DejaVu LGC Sans Mono"
+@text_color = white
+
+
+// Blue color
+@blue_color = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #1c53b9, stop: 0.4 #244796, stop: 0.5 #1d3d8a, stop: 1.0 #1c3478)
+@green_color = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #1cb953, stop: 0.4 #249647, stop: 0.5 #1d8a3d, stop: 1.0 #1c7834)
+@dark_blue_color = #153667
+
+
+// Cyan color
+@cyan_color = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #06beb6, stop: 1 #48b1bf)
+@light_cyan_color = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #0cebeb, stop: 0.5 #20e3b2, stop: 1 #29ffc6)
+@dark_cyan_color = #09C3A5
+
+
+// Red color
+@red_color = #A03A24
+@light_red_color = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e43a15, stop: 1 #e65245)
+@dark_red_color = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #a73737, stop: 1 #7a2828)
+
+
+// Disabled color
+@disabled_color = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgba(170, 170, 170, 100), stop: 0.4 rgba(150, 150, 150, 100), stop: 0.5 rgba(140, 140, 140, 100), stop: 1.0 rgba(100, 100, 100, 100))
+@disabled_text_color = rgba(210, 210, 210, 150)
+
+
+// Backround color
+@background = qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(67, 91, 125, 255), stop:1 rgba(46, 61, 75, 255))
+@backgroud_border_color = #707070
+
+
+// Borders
+@border_white = 2px solid white
+@border_light_blue = 2px solid rgba(210, 210, 210, 150)
+
+// Arrows
+@up_arrow = url(../images/up_arrow_white.png)
+@down_arrow = url(../images/down_arrow_white.png)
+@left_arrow = url(../images/left_arrow_white.png)
+@right_arrow = url(../images/right_arrow_white.png)
+
+// Checkbox
+@checkbox_checked = url(../images/checkbox_checked_white.png)
+@checkbox_unchecked = url(../images/checkbox_unchecked_white.png)
+@checkbox_all = url(../images/checkbox_checked_all_white.png)
+
+// RadioButton
+@radio_checked = url(../images/radio_checked_white.png)
+@radio_unchecked = url(../images/radio_unchecked_white.png)

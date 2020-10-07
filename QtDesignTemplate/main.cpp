@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 //    StyleLoader::attach("/home/islam/DESIGN/DesignTemplate/QtDesignTemplate/styles.qss", QKeySequence("F6"));
 
-    QString settings_file = QString("/home/islam/DESIGN/DesignGradient/QtDesignTemplate/style_config.conf");
+    QString settings_file = QString("../style_config.conf");
     ConfigReader::get_instance()->read_config(settings_file);
 
     MainWindow w;
